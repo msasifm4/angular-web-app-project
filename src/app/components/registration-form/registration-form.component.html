@@ -1,0 +1,36 @@
+<div class="container-fluid bg-gradient">
+    <div class="row justify-content-center align-items-center min-vh-100">
+      <div class="col-lg-6 col-md-8">
+        <div class="card border-0 shadow-lg p-4 rounded-3" style="background-color: rgba(255, 255, 255, 0.9);">
+          <div class="text-center">
+            <img src="assets/logo.png" alt="Logo" class="img-fluid" style="max-width: 100px;">
+          </div>
+          <h2 class="text-center mb-4" style="font-family: 'Poppins', sans-serif;">Registration</h2>
+          <form [formGroup]="registerform" (ngSubmit)="onSubmit()" >
+            <div class="mb-3">
+              <label for="fullName" class="form-label" style="font-family: 'Poppins', sans-serif; font-size: 16px;">Full Name</label>
+              <input type="text" class="form-control form-control-sm rounded-pill" id="fullName" placeholder="Enter your full name" formControlName="fullName">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label" style="font-family: 'Poppins', sans-serif; font-size: 16px;">Email</label>
+              <input type="email" class="form-control form-control-sm rounded-pill" id="email" placeholder="Enter your email" formControlName="email">
+            </div>
+            <div class="mb-3">
+              <label for="username" class="form-label" style="font-family: 'Poppins', sans-serif; font-size: 16px;">Username</label>
+              <input type="text" class="form-control form-control-sm rounded-pill" id="username" placeholder="Enter your username" formControlName="username">
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label" style="font-family: 'Poppins', sans-serif; font-size: 16px;">Password</label>
+              <input type="password" class="form-control form-control-sm rounded-pill" id="password" placeholder="Enter your password"formControlName="password" >
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-dark btn-block rounded-pill" style="font-size: 16px;"  (click)="onSubmit()">Register</button>
+            </div>
+          </form>
+          <div class="text-center mt-3">
+            <p class="mb-0" style="font-size: 14px;">Already have an account? <a routerLink="/login" class="text-primary">Login here</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

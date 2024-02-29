@@ -1,0 +1,7 @@
+<div *ngIf="movie">
+    <h2>{{ movie.title }}</h2>
+    <p>Released Year: {{ movie.releaseYear }}</p>
+</div>
+<div *ngIf="!movie">
+    <p>Movie not found.</p>
+</div>

@@ -1,0 +1,5 @@
+<div class="container">
+    <h2>Movie List</h2>
+    <div *ngFor="let movie of movies" (click)="goToMovieDetail(movie.title)" class="movie-item">{{ movie.title }}</div>
+  </div>
+  
