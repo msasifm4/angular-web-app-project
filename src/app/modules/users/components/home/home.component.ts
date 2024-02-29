@@ -23,11 +23,9 @@ export class HomeComponent implements OnInit {
       (data: any) => {
         console.log('Received movies:', data.movies); // Log the received movies
         this.movies = data.movies.map((movie: any) => ({
-          id: movie.id,
-          title: movie.title,
-          releaseYear: parseInt(movie.releaseYear) // Convert releaseYear to a number
+          title: movie.title
         }));
-        this.movieStore.setMovies(this.movies);
+        
       },
       (error) => {
         console.error('Error fetching movies:', error);
@@ -35,8 +33,9 @@ export class HomeComponent implements OnInit {
     );
   }
   
+  
 
-  goToMovieDetail(movieName: string): void {
-    this.router.navigate(['/users/movies', movieName]);
+  goToMovieDetail(title: string): void {
+    this.router.navigate(['/users/movies', title]);
   }
 }

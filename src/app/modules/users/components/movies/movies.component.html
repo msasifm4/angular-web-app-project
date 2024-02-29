@@ -1,7 +1,12 @@
-<div *ngIf="movie">
-    <h2>{{ movie.title }}</h2>
-    <p>Released Year: {{ movie.releaseYear }}</p>
-</div>
-<div *ngIf="!movie">
-    <p>Movie not found.</p>
-</div>
+<div class="container mt-4">
+    <div *ngIf="movie" class="card">
+      <div class="card-body">
+        <h2 class="card-title">{{ movie.title }}</h2>
+        <p class="card-text">Released Year: {{ movie.releaseYear }}</p>
+      </div>
+    </div>
+    <div *ngIf="!movie" class="alert alert-danger" role="alert">
+      Movie not found.
+    </div>
+  </div>
+  
